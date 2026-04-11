@@ -30,7 +30,7 @@ Para iniciar o servidor, abra um terminal e rode o comando "npm start" ou "node 
 
 - Deixe o servidor rodando
 
-- Abra o aplicativo postman, selecione o método post coloque "http://localhost:3000/integrar" na url.
+- Abra o Postman e crie uma requisição POST com "http://localhost:3000/integrar" na url.
 
 - Selecione a opção Body (raw) e crie o seguinte json:
 
@@ -61,3 +61,22 @@ curl -X POST http://localhost:3000/integrar ^
 -d "{\"username\":\"tomsmith\",\"password\":\"SuperSecretPassword!\",\"url\":\"https://the-internet.herokuapp.com/login\"}"
 
 - Volte no terminal em que iniciou o servidor para ver o JSON estruturado
+
+## 6. Exemplo de resultado
+
+{
+    "success": true,
+    "messageLogin": "Login realizado com sucesso!",
+    "messageData": "Dados extraídos com sucesso!",
+    "total": 10,
+    "data": [
+        {
+            "Lorem": "Iuvaret0",
+            "Ipsum": "Apeirian0",
+            "Dolor": "Adipisci0",
+            "Sit": "Definiebas0",
+            "Amet": "Consequuntur0",
+            "Diceret": "Phaedrum0"
+        }
+    ]
+}
