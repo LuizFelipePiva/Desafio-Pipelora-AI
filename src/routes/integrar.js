@@ -4,10 +4,10 @@ const router = express.Router();
 const { execPuppeteer } = require('../services/execPuppeteer');
 
 router.post('/', async (req, res) => {
-    const { login, senha, url } = req.body;
+    const { username, password, url } = req.body;
 
     try {
-        const data = await execPuppeteer(login, senha, url);
+        const data = await execPuppeteer(username, password, url);
 
         console.log(JSON.stringify(data, null, 2));
 

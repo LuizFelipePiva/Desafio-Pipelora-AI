@@ -1,15 +1,15 @@
 const { configPuppeteer } = require('./configPuppeteer');
 const { extrairDados } = require('./extrair');
 
-async function loginPuppeteer(login, senha, page) {
+async function loginPuppeteer(username, password, page) {
 
     try {
 
         await page.waitForSelector('#username');
         await page.waitForSelector('#password');
 
-        await page.type('#username', login);
-        await page.type('#password', senha);
+        await page.type('#username', username);
+        await page.type('#password', password);
 
         await Promise.all([
             page.waitForNavigation(),

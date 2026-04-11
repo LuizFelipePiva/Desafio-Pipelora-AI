@@ -2,12 +2,12 @@ const { configPuppeteer } = require('./configPuppeteer');
 const { loginPuppeteer } = require('./login');
 const { extrairDados } = require('./extrair');
 
-async function execPuppeteer(login, senha, url) {
+async function execPuppeteer(username, password, url) {
 
     try {
         
         const { browser, page } = await configPuppeteer(url);
-        const loginResult = await loginPuppeteer(login, senha, page);
+        const loginResult = await loginPuppeteer(username, password, page);
 
         if (!loginResult.success) {
             await browser.close();
