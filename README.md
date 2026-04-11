@@ -65,6 +65,7 @@ curl -X POST http://localhost:3000/integrar ^
 ## 6. Exemplo de resultado
 
 {
+
     "success": true,
     "messageLogin": "Login realizado com sucesso!",
     "messageData": "Dados extraídos com sucesso!",
@@ -79,4 +80,5 @@ curl -X POST http://localhost:3000/integrar ^
             "Diceret": "Phaedrum0"
         }
     ]
+    
 }
