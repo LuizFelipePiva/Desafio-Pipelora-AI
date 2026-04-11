@@ -13,6 +13,9 @@ async function execPuppeteer(username, password, url) {
             await browser.close();
             return loginResult;
         }
+
+        await page.goto("https://the-internet.herokuapp.com/challenging_dom")
+        
         const extrairResult = await extrairDados(page);
         await browser.close();
 

@@ -1,7 +1,6 @@
 async function extrairDados(page) {
 
     try {
-        await page.goto("https://the-internet.herokuapp.com/challenging_dom")
 
         await page.waitForSelector('#content table');
 
