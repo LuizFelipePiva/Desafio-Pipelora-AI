@@ -37,9 +37,7 @@ Para iniciar o servidor, abra um terminal e rode o comando "npm start" ou "node 
 {
 
 	"username": "tomsmith",
-
     "password": "SuperSecretPassword!",
-
     "url": "https://the-internet.herokuapp.com/login"
     
 }
@@ -80,5 +78,5 @@ curl -X POST http://localhost:3000/integrar ^
             "Diceret": "Phaedrum0"
         }
     ]
-    
+
 }
