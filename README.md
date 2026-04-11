@@ -14,7 +14,7 @@ npm install puppeteer
 
 npm install express
 
-npm install router
+npm install dotenv
 
 ## 2. Criar .env
 
