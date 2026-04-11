@@ -20,7 +20,8 @@ Ou simplesmente npm install express puppeteer dotenv
 
 ## 2. Criar .env
 
-Crie um arquivo .env na raiz do projeto e adicione "PORT=3000" para a API rodar na porta 3000
+Crie um arquivo .env na raiz do projeto, adicione "PORT=3000" para a API rodar na porta 3000 e "URL_DATA=https://the-internet.herokuapp.com/challenging_dom"
+para ter um caminho para buscar os dados
 
 ## 3. Iniciando Servidor
 
@@ -36,9 +37,9 @@ Para iniciar o servidor, abra um terminal e rode o comando "npm start" ou "node 
 
 {
 
-	"username": "tomsmith",
-    "password": "SuperSecretPassword!",
-    "url": "https://the-internet.herokuapp.com/login"
+	"login": "tomsmith",
+    "senha": "SuperSecretPassword!",
+    "url_sistema": "https://the-internet.herokuapp.com/login"
     
 }
 
@@ -56,7 +57,7 @@ curl -X POST http://localhost:3000/integrar ^
 
 -H "Content-Type: application/json" ^
 
--d "{\"username\":\"tomsmith\",\"password\":\"SuperSecretPassword!\",\"url\":\"https://the-internet.herokuapp.com/login\"}"
+-d "{\"login\":\"tomsmith\",\"senha\":\"SuperSecretPassword!\",\"url_sistema\":\"https://the-internet.herokuapp.com/login\"}"
 
 - Volte no terminal em que iniciou o servidor para ver o JSON estruturado
 
