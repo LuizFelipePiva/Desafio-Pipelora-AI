@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const fs = require('fs');
 
 const { execPuppeteer } = require('../services/execPuppeteer');
 
@@ -10,6 +11,7 @@ router.post('/', async (req, res) => {
         const data = await execPuppeteer(login, senha, url_sistema);
 
         console.log(JSON.stringify(data, null, 2));
+        fs.writeFileSync('result.json', JSON.stringify(data, null, 2));
 
         if (data.success === true) {
 

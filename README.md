@@ -9,31 +9,28 @@
 https://nodejs.org/en/download
 
 - Para instalar todas as dependências, rode os comandos no terminal:
+{
 
-npm install puppeteer
-
-npm install express
-
-npm install dotenv
-
-Ou simplesmente npm install express puppeteer dotenv
+    npm install express puppeteer dotenv
+    
+}
 
 ## 2. Criar .env
 
 Crie um arquivo .env na raiz do projeto, adicione "PORT=3000" para a API rodar na porta 3000 e "URL_DATA=https://the-internet.herokuapp.com/challenging_dom"
-para ter um caminho para buscar os dados
+para ter um caminho para buscar os dados.
 
 ## 3. Iniciando Servidor
 
-Para iniciar o servidor, abra um terminal e rode o comando "npm start" ou "node src/index.js"
+Para iniciar o servidor, abra um terminal e rode o comando "npm start" ou "node src/index.js".
 
-## 4. Como rodar (Postman)
+## 4. Como rodar (Postman / Apidog)
 
-- Deixe o servidor rodando
+- Deixe o servidor rodando.
 
-- Abra o Postman e crie uma requisição POST com "http://localhost:3000/integrar" na url.
+- Abra o aplicativo e crie uma requisição POST com "http://localhost:3000/integrar" na url.
 
-- Selecione a opção Body (raw) e crie o seguinte json:
+- Selecione a opção Body -> raw (Postman) ou JSON (Apidog) e crie o seguinte json:
 
 {
 
@@ -43,13 +40,13 @@ Para iniciar o servidor, abra um terminal e rode o comando "npm start" ou "node 
     
 }
 
-- Clique no botao "Send"
+- Clique no botao "Send".
 
 ## 5. Como rodar (terminal)
 
-- Deixe o servidor rodando
+- Deixe o servidor rodando.
 
-- Abra um novo terminal (CMD)
+- Abra um novo terminal (CMD).
 
 - Cole o seguinte comando:
 
@@ -59,9 +56,11 @@ curl -X POST http://localhost:3000/integrar ^
 
 -d "{\"login\":\"tomsmith\",\"senha\":\"SuperSecretPassword!\",\"url_sistema\":\"https://the-internet.herokuapp.com/login\"}"
 
-- Volte no terminal em que iniciou o servidor para ver o JSON estruturado
+## Ver resultado
 
-## 6. Exemplo de resultado
+- Depois de rodar, o arquivo "result.json" receberá o resultado da chamada.
+
+## 7. Exemplo de resultado
 
 {
 
