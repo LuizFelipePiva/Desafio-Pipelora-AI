@@ -1,20 +1,21 @@
 const { configPuppeteer } = require('./configPuppeteer');
 const { loginPuppeteer } = require('./login');
 const { extrairDados } = require('./extrair');
+require('dotenv').config();
 
-async function execPuppeteer(username, password, url) {
+async function execPuppeteer(login, senha, url_sistema) {
 
     try {
         
-        const { browser, page } = await configPuppeteer(url);
-        const loginResult = await loginPuppeteer(username, password, page);
+        const { browser, page } = await configPuppeteer(url_sistema);
+        const loginResult = await loginPuppeteer(login, senha, page);
 
         if (!loginResult.success) {
             await browser.close();
             return loginResult;
         }
 
-        await page.goto("https://the-internet.herokuapp.com/challenging_dom")
+        await page.goto(process.env.URL_DATA);
         
         const extrairResult = await extrairDados(page);
         await browser.close();
