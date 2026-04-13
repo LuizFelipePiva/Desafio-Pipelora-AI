@@ -1,5 +1,9 @@
 # Desafio-Pipelora-AI
 
+- Url utilizada para fazer o login: https://the-internet.herokuapp.com/login
+
+- Url utilizada para extrair os dados: https://the-internet.herokuapp.com/challenging_dom
+
 ## Como utilizar a API:
 
 ## 1. Baixando dependências
@@ -9,6 +13,7 @@
 https://nodejs.org/en/download
 
 - Para instalar todas as dependências, rode os comandos no terminal:
+
 {
 
     npm install express puppeteer dotenv

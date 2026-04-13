@@ -1,5 +1,5 @@
-const { configPuppeteer } = require('./configPuppeteer');
-const { extrairDados } = require('./extrair');
+// const { configPuppeteer } = require('./configPuppeteer');
+// const { extrairDados } = require('./extrair');
 
 async function loginPuppeteer(login, senha, page) {
 
